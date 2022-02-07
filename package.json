@@ -1,0 +1,16 @@
+{
+  "name": "api_restful",
+  "version": "1.0.0",
+  "description": "API_RESTFUL entregable 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.js"
+  },
+  "author": "A.T.",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "multer": "^1.4.4"
+  }
+}
