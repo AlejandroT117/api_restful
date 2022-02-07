@@ -61,7 +61,7 @@ router.post("/productos", (req, res) => {
 
 // PUT 
 
-router.put("/:id", (req, res) => {
+router.put("/productos/:id", (req, res) => {
   const { id } = req.params // parametros de URL
   const { nombre, precio, thumbnail } = req.body // parametros de URL
 
@@ -80,14 +80,14 @@ router.put("/:id", (req, res) => {
     thumbnail
   })
 
-  res.sendStatus(200)
+  //res.sendStatus(200)
   res.send(`Producto actualizado: ${producto}`)
 })
 
 //Delete 
 
 
-router.delete("/:id", (req, res) => {
+router.delete("/productos/:id", (req, res) => {
   const { id } = req.body // parametros de URL
   //const { id } = req.params // parametros de URL
 
@@ -105,7 +105,8 @@ router.delete("/:id", (req, res) => {
   const index = producto.indexOf(movie)
   productos.splice(index, 1)
 
-  res.sendStatus(200)
+  //res.sendStatus(200)
+  res.send(`Producto borrado id:${index}`)
 
 })
 
