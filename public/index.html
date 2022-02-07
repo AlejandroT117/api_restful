@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API PRODUCTS</title>
+</head>
+<body>
+  <h3>PRODUCTOS</h3>
+
+  <ul>
+    <li><a href="/api/productos">Ver todos los productos</a></li>
+
+  </ul>
+
+  <section>
+    <h4>Devuelve productos según ID</h4>
+
+    <input type="number" name="id" id="get_id" placeholder="ID de producto">
+
+    <button type="" onclick="searchID(get_id.value)">Buscar producto</button>
+  </section>
+
+  <section>
+    <h4>Agrega productos</h4>
+
+    <form action="/api/productos" method="post">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre"> 
+      <label for="precio">Precio</label>
+      <input type="number" name="precio" id="precio">  
+      <label for="thumbnail">Thumbnail</label>
+      <input type="text" name="thumbnail" id="thumbnail">  
+
+      <button type="submit">Agregar producto</button>
+  
+    </form>
+  </section>
+
+  <section>
+    <h4>Actualiza producto</h4>
+
+    <form action="/api/productos" method="post">  
+  
+    </form>
+  </section>
+
+  <section>
+    <h4>Borra producto</h4>
+
+    <form action="/api/productos" method="post">
+
+    </form>
+
+    <input type="number" name="id" id="deleteId" placeholder="ID de producto">
+
+    <button type="" onclick="deleteID(get_id.value)">Borra producto</button>
+  </section>
+
+
+
+  <script>
+    function searchID(id){
+      window.location.href = `/api/productos/${id}`
+    }
+    
+  </script>
+
+</body>
+</html>
